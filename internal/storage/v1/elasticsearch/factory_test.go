@@ -274,7 +274,6 @@ func TestESStorageFactoryWithConfigError(t *testing.T) {
 		config:         &cfg,
 	}
 
-	// Override new-client to simulate immediate failure
 	f.newClientFn = func(_ context.Context, _ *escfg.Configuration, _ *zap.Logger, _ metrics.Factory) (es.Client, error) {
 		return nil, errors.New("simulated Elasticsearch client creation failure")
 	}
