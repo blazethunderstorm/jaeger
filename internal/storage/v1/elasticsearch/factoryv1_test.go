@@ -117,7 +117,7 @@ func TestFactoryBase_ESClientFailure(t *testing.T) {
 			},
 		}
 
-		// Now invoke the logic that causes client to be created
+		
 		client, err := f.newClientFn(context.Background(), f.config, f.logger, f.metricsFactory)
 		require.Nil(t, client)
 		require.ErrorContains(t, err, "mock connection error")
