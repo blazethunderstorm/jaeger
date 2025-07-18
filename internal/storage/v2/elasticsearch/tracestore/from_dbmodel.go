@@ -459,6 +459,7 @@ func dbSpanToScope(span *dbmodel.Span, scopeSpan ptrace.ScopeSpans) {
 	}
 }
 
+
 func getAndDeleteTag(span *dbmodel.Span, key string) (string, bool) {
 	for i := range span.Tags {
 		if span.Tags[i].Key == key {
